@@ -1,3 +1,6 @@
+# Day 2
+# Understanding data types and how to manipulate strings
+
 #len(12)
 #object of type 'int' has no len()
 
