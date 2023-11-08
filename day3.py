@@ -1,3 +1,6 @@
+# Day 3
+# Control flow and logical operators
+
 # Exercício 1
 print("Welcome to the rollercoaster!")
 height = int(input("What's your height in cm?\n"))
