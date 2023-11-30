@@ -19,10 +19,11 @@ while len(correct_guesses) < len(states):
     guess = screen.textinput(title=f"{len(correct_guesses)}/{len(states)} Guess the State",
                              prompt="Guess a state's name").title()
     if guess == "Exit":
-        missing_states = []
-        for state in states:
-            if state not in correct_guesses:
-                missing_states.append(state)
+        missing_states = [state for state in states if state not in correct_guesses]
+        # missing_states = []
+        # for state in states:
+        #     if state not in correct_guesses:
+        #         missing_states.append(state)
         pandas.DataFrame(missing_states).to_csv("states_to_learn.csv")
         break
     if guess in states:
